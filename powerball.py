@@ -31,9 +31,9 @@ def generate(end, fileName, tID):
 			selectedWhiteBall = str(random.choice(possibleWhiteBalls))
 			possibleWhiteBalls.remove(int(selectedWhiteBall))
 			allWhiteBalls.append(selectedWhiteBall)
-
 		selectedPowerBall = str(random.choice(possiblePowerBalls))
 		fh.write(",".join(allWhiteBalls) + ":" + selectedPowerBall)
+		time.sleep(.1)
 		fh.write(b)
 		completedPercentage = float(float(timesDone)/float(end)*100)
 		print str(completedPercentage) #+ "% - Thread " + str(tID);
